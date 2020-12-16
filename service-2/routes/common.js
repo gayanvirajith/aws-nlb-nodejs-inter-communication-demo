@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
 router.get('/service-1', async (req, res) => {
 	try {
 		const url = `${externalServiceBaseUrl}/service-1/v1/`;
+		log.info(`service-1 url: ${url}`);
     const jsonResponse = await fetchFromApi(url);
     log.info("service-1 - response: " + JSON.stringify(jsonResponse))
     return res.send(jsonResponse)

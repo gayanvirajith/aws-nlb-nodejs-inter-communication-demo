@@ -1,0 +1,12 @@
+#!/bin/bash
+
+docker build -t node-demo-service-1 service-1/
+docker build -t node-demo-service-2 service-2/
+
+docker tag node-demo-service-1 gayanvirajith/aws-nlb-nodejs-demo-service-1
+docker tag node-demo-service-2 gayanvirajith/aws-nlb-nodejs-demo-service-2
+
+docker push gayanvirajith/aws-nlb-nodejs-demo-service-1
+docker push gayanvirajith/aws-nlb-nodejs-demo-service-2
+
+
